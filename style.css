@@ -7,7 +7,7 @@
 body{
     background-color: blanchedalmond;
 }
-body p:hover{
+#viewScores:hover{
     color: purple;
     font-weight: 600;
 }
