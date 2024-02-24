@@ -54,6 +54,34 @@ body{
     border-radius: 5px;
     
 }
-.btn:hover{
+.btn:hover:not([disabled]){
+    background-color: purple;
+}
+
+
+
+.correct{
+    background-color: green;
+}
+.correct:hover{
+    background-color: green;
+
+}
+
+
+
+/* Restart Button  */
+.restartBtn{
+    color: white;
+    background-color: blueviolet;
+    border-radius: 4px;
+    font-size: 100%;
+    padding: 10px;
+    margin: 20px auto 0 ;
+    cursor:pointer;
+    transition: all 0.3s;
+    
+}
+#restartBtn:hover{
     background-color: purple;
 }
