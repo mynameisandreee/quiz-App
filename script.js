@@ -64,13 +64,14 @@ function startQuiz(){
     score = 0  // set the score to 0 at the beginning 
     showQuestion() // function that shows the questions 
 }
-
+// this function is called by the startQuiz function. 
+// when the this function gets the question from the array and shows in the program 
 function showQuestion(){
-    resetState();
-    let currentQuestion = questions[currentQuestionIndex]
-    let questionNo = currentQuestionIndex + 1
-    questionEl.innerHTML = questionNo + ". " + currentQuestion.question
-
+    resetState(); // reset the state everytime user selects an answer so the next question and asnwer can be displayed    
+    let currentQuestion = questions[currentQuestionIndex] // stores the current question using the current Q index 
+    let questionNo = currentQuestionIndex + 1  // stores the question number 
+    questionEl.innerHTML = questionNo + ". " + currentQuestion.question // displayed the question number and question on the html with the ID of questions 
+    //the following code displays the answer in to the created buttons and calls the selectanswer function 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button")
         button.innerHTML = answer.text
@@ -83,12 +84,14 @@ function showQuestion(){
     })
 }
 
+// this function resets the state: meaning that it clears the question and answer once the user move on to the next question 
 function resetState(){
     while(answerButton.firstChild){
         answerButton.removeChild(answerButton.firstChild)
     }
 }
-
+// this is the function that access weather the answer is correct or wrong . if the user selects the correct answer the Time is stored in the scored  
+//and if the user selects the wrong answer. it deducts -10 to the time and stores it in the score variable 
 function selectAnswer(e){
     const selectBtn = e.target
     const isCorrect = selectBtn.dataset.correct === "true"
@@ -100,14 +103,10 @@ function selectAnswer(e){
         startingTime = startingTime - 10
         score = startingTime
     }
-    Array.from(answerButton.children).forEach(button => {
-        if(button.dataset.correct === "true"){
-            button.classList.add("correct")
-        }
-        button.disabled = true
-    })
-}
 
+   
+}
+// this funciton 
 
 function showScore(){
     resetState();
