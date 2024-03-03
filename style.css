@@ -85,3 +85,54 @@ body{
 #restartBtn:hover{
     background-color: purple;
 }
+
+/* input box  */
+.player-name-input{
+    height: 2.5rem;
+    font-size: 100%;
+    border-radius: 5%;
+    text-align: center;
+    margin-left: 2.5rem;
+    border-color: blueviolet;
+    border-width: .3rem;
+}
+
+/* submit button */
+.submitBtn{
+    color: white;
+    background-color: blueviolet;
+    border-radius: 4px;
+    font-size: 100%;
+    padding: 10px;
+    margin: 20px auto 0 ;
+    cursor:pointer;
+    transition: all 0.3s;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+
+}
+
+#leaderboardContainer{
+    border: solid .5rem blueviolet;
+    width: 10%;
+    color: azure;
+    background-color: black;
+}
+#resetLeaderboard{
+    color: white;
+    background-color: blueviolet;
+    border-radius: 5px;
+    font-size: 100%;
+    padding: 10px;
+    margin: 20px auto 0 ;
+    cursor:pointer;
+    transition: all 0.3s;
+    margin-left: 1.5%;
+}
+#resetLeaderboard:hover{
+    background-color: violet;
+}
+
+#viewScores{
+    font-size: 2rem;
+}
